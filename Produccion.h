@@ -1,13 +1,15 @@
 #include <iostream>
+#include <iostream>
 #include <vector>
-#include <string>
 
-struct Nodo{
+struct Nodo
+{
   char tipo;
   std::string valor;
 }
 
-class Produccion{
+class Produccion
+{
 	private:
 		Nodo izquierda ;
 		std::vector<Nodo> derecha;	
@@ -15,30 +17,20 @@ class Produccion{
 	public: 
 		Production() = default
 
-		Nodo getIzquierda();
-		std::vector<Nodo> getDerecha();
-		void setIzquierda(Nodo izquierda);
-		void setDerecha(std::vector<Nodo> derecha);
+    //Setters y Getters
+		Nodo getIzquierda(){
+      return izquierda; 
+    }
+
+		std::vector<Nodo> getDerecha(){
+      return derecha;
+    }
+
+		void setIzquierda(Nodo izquierda){
+      this->izquierda = izquierda;
+    }
+
+		void setDerecha(std::vector<Nodo> derecha){
+      this->derecha = derecha;
+    }
 };
-
-Nodo Produccion::getIzquierda()
-{
-  return izquierda; 
-}
-
-std::vector<Nodo> Produccion::getDerecha()
-{
-  return derecha;
-}
-
-void Produccion::setIzquierda(Nodo izquierda)
-{
-  this->izquierda = izquierda;
-  //this -> izquierda.tipo = izquierda.tipo;
-  //this -> izquierda.valor = izquierda.valor;
-}
-
-void Produccion::setDerecha(std::vector<Nodo> derecha)
-{
-  this->derecha = derecha;
-}
