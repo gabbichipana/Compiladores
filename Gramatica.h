@@ -1,51 +1,26 @@
-#ifndef GRAMMAR_HPP
-#define GRAMMAR_HPP
+#include "Production.h"
 
-#include <iostream>
-#include <string>
-#include <vector>
 
-enum Type
-{
-	Non_terminal,
-	Terminal
-};
-
-struct Nodo
-{
-	Type type;
-	std::string value;
-};
-
-class Production
+class Gramatica
 {
 	private:
-		std::string left;
-		std::vector<std::string> right;	
-	
-	public: 
-		Production() = default
-
-		Nodo getLeft();
-		std::vector<Nodo> getRight();
-		void setLeft(Nodo left);
-		void setRight(std::vector<Nodo> right);
-
-		std::vector<Production> getProducciones(std::string nt);
-		std::vector<Production> getPrimeros(string nt);
-		std::vector<Production> getSiguientes(string nt);
-		
-};
-
-class Grammar
-{
-	private:
-		std::vector<Production> productions;
-		std::vector<Nodo> NonTerminals;
-		std::vector<Nodo> Terminals;
+		std::vector<Produccion> producciones;
+		std::vector<std::string> NoTerminales;
+		std::vector<std::string> Terminales;
 	public:
 		Grammar() = default;
-};
 
-#include "grammar.inl"
-#endif //GRAMMAR_HPP
+	    	void setProducciones(vector <Produccion> producciones)
+	    	{
+	      		this->producciones = producciones;
+	    	}
+
+	    	std::vector<Produccion> getProducciones(std::string nt)
+	    	{
+	      		return this->producciones
+	    	}		
+
+
+	    	std::vector<Produccion> getPrimeros(string nt);
+		std::vector<Produccion> getSiguientes(string nt);
+};
