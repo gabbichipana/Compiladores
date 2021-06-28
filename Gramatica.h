@@ -21,6 +21,12 @@ class Gramatica
 	    	}		
 
 
-	    	std::vector<Produccion> getPrimeros(string nt);
-		std::vector<Produccion> getSiguientes(string nt);
+	    	std::vector<Produccion> getPrimeros(string nt)
+		{
+			
+		}
+		std::vector<Produccion> getSiguientes(string nt)
+		{
+			
+		}
 };
