@@ -33,16 +33,12 @@ std::vector<Nodo> Produccion::getDerecha()
 
 void Produccion::setIzquierda(Nodo izquierda)
 {
-  this -> izquierda.tipo = izquierda.tipo;
-  this -> izquierda.valor = izquierda.valor;
+  this->izquierda = izquierda;
+  //this -> izquierda.tipo = izquierda.tipo;
+  //this -> izquierda.valor = izquierda.valor;
 }
 
 void Produccion::setDerecha(std::vector<Nodo> derecha)
 {
-  for(int i = 0; i < derecha.size(); i++)
-  {
-    this -> derecha[i].tipo = derecha[i].tipo;
-    this -> derecha[i].valor = derecha[i].valor;
-  }
+  this->derecha = derecha;
 }
-
