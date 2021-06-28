@@ -17,20 +17,20 @@ class Produccion
 	public: 
 		Production() = default
 
-    //Setters y Getters
+    		//Setters y Getters
 		Nodo getIzquierda(){
-      return izquierda; 
-    }
+			return izquierda; 
+		}
 
 		std::vector<Nodo> getDerecha(){
-      return derecha;
-    }
+			return derecha;
+		}
 
 		void setIzquierda(Nodo izquierda){
-      this->izquierda = izquierda;
-    }
+			this->izquierda = izquierda;
+		}
 
 		void setDerecha(std::vector<Nodo> derecha){
-      this->derecha = derecha;
-    }
+			this->derecha = derecha;
+		}
 };
