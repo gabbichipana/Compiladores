@@ -1,7 +1,9 @@
 class TAS {
   private:
     vector <vector <Produccion>> tas;
+    Gramatica gramatica;
   public: 
     TAS() = default;
-    Gramatica gramatica;
+    void llenado(){
+    }
 };
