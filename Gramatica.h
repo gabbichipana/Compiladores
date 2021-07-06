@@ -178,6 +178,11 @@ class Gramatica
     std::string getSiguiente(std::string nt, vector<string> &siguientes){
       
       for(int i=0; i<producciones.size();i++){
+	 //Esta es la primera regla
+         if(nt==producciones[0].izquierda){
+            siguientes.push_back("\'$\'");
+         }      
+	 
         if(existe(producciones[i].derecha, nt)){
           
           int j;
@@ -186,11 +191,6 @@ class Gramatica
             if(nt==producciones[i].derecha[j]){
               break;
             }
-          }
-
-          //Esta es la primera regla
-          if(nt==producciones[0].izquierda){
-            siguientes.push_back("\'$\'");
           }
 
           //Verificamos si estamos en la segunda regla
